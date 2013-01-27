@@ -1,9 +1,11 @@
 require 'capybara/rails'
+require 'acceptance/support/browser'
 
-Capybara.register_driver :iphone do |app|
-  Capybara::Selenium::Driver.new(app,
-                                 :browser => :iphone,
-                                 :url => 'http://localhost:3001/hub')
+browser = Browser.new
+
+Capybara.register_driver :selenium_override do |app|
+  browser.driver_for(app)
 end
 
-Capybara.current_driver = :iphone
+Capybara.current_driver = :selenium_override
+

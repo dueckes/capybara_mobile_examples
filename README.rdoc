@@ -2,7 +2,13 @@
 
 An example of how to get Capybara running on different mobile devices
 
-== iPhone and iPad
+== To run
+
+    BROWSER=<ios||chrome||firefox> bundle exec rspec spec/acceptance/
+
+== You will need
+
+=== iPhone and iPad
 
 Using the simulator as I don't have a real iPhone
 
