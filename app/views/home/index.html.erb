@@ -1,13 +1,18 @@
 <h1>Awesome Mobile App </h1>
 
-<dl>
+<dl class='information'>
   <dt>Width:</dt>
   <dd class='width'> </dd>
   <dt>Height:</dt>
   <dd class='height'></dd>
   <dt>User Agent:</dt>
   <dd class='agent'> <%= @user_agent %> </dd>
+  <dt>Thing to test:</dt>
+  <dd class='test-me'>Hello!</dd>
 </dl>
+
+<div class='not-here'>
+</div>
 
 <script>
  $("dd.width").text($(window).width());
