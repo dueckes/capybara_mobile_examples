@@ -1,0 +1,13 @@
+= Capybara 2 examples
+
+An example of how to get Capybara running on different mobile devices
+
+== iPhone and iPad
+
+Using the simulator as I don't have a real iPhone
+
+Taken from: http://code.google.com/p/selenium/wiki/IPhoneDriver
+* install xcode, ios sim, blah blah
+* git clone https://code.google.com/p/selenium/
+* build iWebdriver.xcodeproj project and run it
+

@@ -1,0 +1,15 @@
+<h1>Awesome Mobile App </h1>
+
+<dl>
+  <dt>Width:</dt>
+  <dd class='width'> </dd>
+  <dt>Height:</dt>
+  <dd class='height'></dd>
+  <dt>User Agent:</dt>
+  <dd class='agent'> <%= @user_agent %> </dd>
+</dl>
+
+<script>
+ $("dd.width").text($(window).width());
+ $("dd.height").text($(window).height());
+</script>
