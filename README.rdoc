@@ -1,10 +1,16 @@
-= Capybara 2 examples
+= Capybara mobile examples
 
-An example of how to get Capybara running on different mobile devices
+This code demonstrates how to:
+
+* run capybara with ios and android devices
+* configure capybara to run with a browser set in the environment
+* get firefox and chrome to simulate being an iphone, by changing the browser size and user agent
+
+To keep the example clean, all normal test framework things like page models, have been ommitted. The interesting code is in spec/acceptance/support/browser.rb
 
 == To run
 
-    BROWSER=<ios||chrome||firefox> bundle exec rspec spec/acceptance/
+    BROWSER=<ios|chrome|chrome_iphone|firefox|ff_iphone> bundle exec rspec spec/acceptance/
 
 == Set up
 
@@ -26,4 +32,9 @@ Full instructions at: http://code.google.com/p/selenium/wiki/IPhoneDriver
    BROWSER=android bundle exec rspec spec/acceptance/
 
 === Chrome
- Install ChromeDriver http://code.google.com/p/selenium/wiki/ChromeDriver
+
+Install ChromeDriver http://code.google.com/p/selenium/wiki/ChromeDriver
+
+   BROWSER=chrome bundle exec rspec spec/acceptance/
+   BROWSER=chrome_iphone bundle exec rspec spec/acceptance/
+
