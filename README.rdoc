@@ -6,14 +6,24 @@ An example of how to get Capybara running on different mobile devices
 
     BROWSER=<ios||chrome||firefox> bundle exec rspec spec/acceptance/
 
-== You will need
+== Set up
 
 === iPhone and iPad
 
-Using the simulator as I don't have a real iPhone
-
-Taken from: http://code.google.com/p/selenium/wiki/IPhoneDriver
+Full instructions at: http://code.google.com/p/selenium/wiki/IPhoneDriver
 * install xcode, ios sim, blah blah
-* git clone https://code.google.com/p/selenium/
+    git clone https://code.google.com/p/selenium/
 * build iWebdriver.xcodeproj project and run it
 
+   BROWSER=ios bundle exec rspec spec/acceptance/
+
+=== Andriod
+
+* You need the android sdk, platform tools etc installed http://developer.android.com/sdk/index.html
+* You need AndroidDriver (http://code.google.com/p/selenium/wiki/AndroidDriver) installed on the target device (or emulator http://developer.android.com/tools/devices/emulator.html)
+* You need a tunnel set up `<sdk install dir>/platform-tools/adb forward tcp:8080 tcp:8080`
+
+   BROWSER=android bundle exec rspec spec/acceptance/
+
+=== Chrome
+ Install ChromeDriver http://code.google.com/p/selenium/wiki/ChromeDriver

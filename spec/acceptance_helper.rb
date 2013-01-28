@@ -8,4 +8,3 @@ Capybara.register_driver :selenium_override do |app|
 end
 
 Capybara.current_driver = :selenium_override
-
